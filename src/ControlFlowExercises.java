@@ -78,8 +78,12 @@ public class ControlFlowExercises {
         String userContinueToo = scanner.next();
         if(userContinueToo.equalsIgnoreCase("Yes")) {
             System.out.println("Great, I will display your number grade into a letter grade.");
-            if(userGrade >= 88 && userGrade <= 100) {
+            if(userGrade == 99 || userGrade == 100) {
+                System.out.println(userGrade + " is an A+ in letter grade form.");
+            }if(userGrade >= 90 && userGrade <= 98) {
                 System.out.println(userGrade + " is an A in letter grade form.");
+            }if(userGrade >= 88 && userGrade <= 89) {
+                System.out.println(userGrade + " is an A- in letter grade form.");
             } else if (userGrade >= 80 && userGrade <= 87) {
                 System.out.println(userGrade + " is a B in letter grade form.");
             } else if (userGrade >= 67 && userGrade <= 79) {
