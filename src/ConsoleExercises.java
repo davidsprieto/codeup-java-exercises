@@ -7,6 +7,7 @@ public class ConsoleExercises {
         System.out.printf("The value of pi is %.2f.", pi); // Can be written using "printf".
         System.out.format("%nThe value of pi is %.2f.%n", pi); // Can also be written using "format". "%n" prints to a new line.
 
+
         // #1 to #4 - Scanner Class
         // #1
         Scanner newScanner = new Scanner(System.in);
@@ -16,6 +17,7 @@ public class ConsoleExercises {
         System.out.println("The integer you entered is: " + userInputInt);
         // What happens if you input something that is not an integer?
         // Answer: Java gives you an error message for "InputMismatchException".
+
 
         // #2
         System.out.println("Please enter three words: ");
@@ -32,11 +34,13 @@ public class ConsoleExercises {
         // "%s" is a placeholder which will be replaced by the values of userInput1, userInput2, & userInput3.
         // Again, "%n" prints to a new line. Combine both "%s" and "%n" to print the values of userInputs to new lines.
 
+
         // #3
         // System.out.println("Please enter a sentence: ");
         // String userInputString = newScanner.next();
         // System.out.println("The sentence you entered is: " + userInputString);
         // Output: Only the first word of the sentence is printed to the console as the .next() method only captures the next word. Use .nextLine() method to capture the entire line/sentence.
+
 
         // #4
         System.out.println("Please enter a sentence: ");
@@ -44,7 +48,23 @@ public class ConsoleExercises {
         System.out.println("The sentence you entered is: " + userInputString2);
 
         // Can also be written as:
-//        System.out.printf("The sentence you entered is: %s", userInputString2);
+        System.out.printf("The sentence you entered is: %s%n", userInputString2);
+
+
+        // #1 $ #2 - Calculate Perimeter and Area of room.
+        // #1
+        System.out.println("Please enter the length of the room: ");
+        int length = newScanner.nextInt();
+        System.out.println("Please enter the width of the room: ");
+        int width = newScanner.nextInt();
+        System.out.println("You entered a length of " + length + " and a width of " + width);
+        // Can also be written as:
+        System.out.printf("You entered a length of %s and a width of %s%n", length, width);
+
+
+        // #2
+        System.out.println("The area is: " + length * width + ".");
+        System.out.println("The perimeter is: " + ((length * 2) + (width * 2)) + ".");
 
     }
 }
