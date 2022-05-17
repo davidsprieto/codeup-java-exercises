@@ -28,7 +28,6 @@ public class ConsoleExercises {
         System.out.println(userInput1);
         System.out.println(userInput2);
         System.out.println(userInput3);
-
         // Can also be written as:
         System.out.printf("The three words you entered are: %n%s %n%s %n%s %n", userInput1, userInput2, userInput3);
         // "%s" is a placeholder which will be replaced by the values of userInput1, userInput2, & userInput3.
@@ -46,25 +45,25 @@ public class ConsoleExercises {
         System.out.println("Please enter a sentence: ");
         String userInputString2 = newScanner.nextLine();
         System.out.println("The sentence you entered is: " + userInputString2);
-
         // Can also be written as:
         System.out.printf("The sentence you entered is: %s%n", userInputString2);
 
 
         // #1 $ #2 - Calculate Perimeter and Area of room.
         // #1
-        System.out.println("Please enter the length of the room: ");
-        int length = newScanner.nextInt();
-        System.out.println("Please enter the width of the room: ");
-        int width = newScanner.nextInt();
-        System.out.println("You entered a length of " + length + " and a width of " + width);
+        System.out.print("Please enter the length of the room: ");
+        String length = newScanner.nextLine();
+        System.out.print("Please enter the width of the room: ");
+        String width = newScanner.nextLine();
+        System.out.println("You entered a length of " + Integer.parseInt(length) + " and a width of " + Integer.parseInt(width)); // Using parseInt to convert the string number to an integer number.
         // Can also be written as:
         System.out.printf("You entered a length of %s and a width of %s%n", length, width);
 
 
         // #2
-        System.out.println("The area is: " + length * width + ".");
-        System.out.println("The perimeter is: " + ((length * 2) + (width * 2)) + ".");
+        System.out.println("The area is: " + Integer.parseInt(length) * Integer.parseInt(width) + ".");
+        System.out.println("The perimeter is: " + ((Integer.parseInt(length) * 2) + (Integer.parseInt(width) * 2)) + ".");
+
 
     }
 }
