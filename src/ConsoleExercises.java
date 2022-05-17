@@ -49,7 +49,7 @@ public class ConsoleExercises {
         System.out.printf("The sentence you entered is: %s%n", userInputString2);
 
 
-        // #1 $ #2 - Calculate Perimeter and Area of room.
+        // #1 & #2 - Calculate Perimeter and Area of room.
         // #1
         System.out.print("Please enter the length of the room: ");
         String length = newScanner.nextLine();
@@ -61,9 +61,8 @@ public class ConsoleExercises {
 
 
         // #2
-        System.out.println("The area is: " + Integer.parseInt(length) * Integer.parseInt(width) + ".");
-        System.out.println("The perimeter is: " + ((Integer.parseInt(length) * 2) + (Integer.parseInt(width) * 2)) + ".");
-
+        System.out.println("The area is: " + Integer.parseInt(length) * Integer.parseInt(width) + " ft^2.");
+        System.out.println("The perimeter is: " + ((Integer.parseInt(length) * 2) + (Integer.parseInt(width) * 2)) + " feet.");
 
     }
 }
