@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
 
@@ -42,7 +43,7 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a number between 1 and 10 again: ");
         int userNumber = scanner.nextInt();
-        System.out.print("You entered " + userNumber + "." + " Do you wish to continue (Yes/No)?");
+        System.out.print("You entered " + userNumber + "." + " Do you wish to continue (Yes/No)? ");
         String userContinue = scanner.next();
         if(userContinue.equalsIgnoreCase("Yes") && userNumber >= 1 && userNumber <= 10) {
             long fact = 1;
@@ -59,6 +60,37 @@ public class MethodsExercises {
         return userNumber;
     }
 
+    // #4 - Dice Rolling
+    public static int rollDice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter the number of sides for a pair of dice: ");
+        int userDiceSides = scanner.nextInt();
+        System.out.print("You entered " + userDiceSides + "." + " Would you like to roll the dice - (Yes/No)? ");
+        String userContinue = scanner.next();
+        if(userContinue.equalsIgnoreCase("Yes")) {
+            Random random = new Random();
+            int low = 1;
+            int high = 7;
+            int dice1 = random.nextInt(high-low) + low;
+            int dice2 = random.nextInt(high-low) + low;
+            System.out.println("You rolled a " + dice1 + " for the first die and a " + dice2 + " for the second die.");
+            System.out.print("Would you like to roll again - (Yes/No)? ");
+            String userRollAgain = scanner.next();
+            if(userRollAgain.equalsIgnoreCase("Yes")) {
+                System.out.println("Great!");
+                rollDice();
+            } else {
+                System.out.println("No? Okay, that's fine.");
+            }
+        } else if (userContinue.equalsIgnoreCase("No")) {
+            System.out.println("Okay, that's fine.");
+        }
+        return userDiceSides;
+    }
+
+    // #5 - Game Development 101
+
+
 
     public static void main(String[] args) {
         System.out.println("Addition result: " + add(5, 5));
@@ -69,6 +101,7 @@ public class MethodsExercises {
 
         getInteger();
         factorial();
+        rollDice();
     }
 
 }
