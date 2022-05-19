@@ -89,7 +89,45 @@ public class MethodsExercises {
     }
 
     // #5 - Game Development 101
-
+    public static int guessNum() {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int low = 1;
+        int high = 101;
+        int randomNumber = random.nextInt(high-low) + low;
+        System.out.print("Please guess a number between 1 and 100: ");
+        int userRandomNum = scanner.nextInt();
+        if(userRandomNum < randomNumber) {
+            System.out.println("HIGHER");
+            System.out.print("GUESS AGAIN: ");
+            int userRandomNum2 = scanner.nextInt();
+            if(userRandomNum2 < randomNumber) {
+                System.out.println("HIGHER");
+                System.out.println("The number was: " + randomNumber + ".");
+            } else if(userRandomNum2 > randomNumber) {
+                System.out.println("LOWER");
+                System.out.println("The number was: " + randomNumber + ".");
+            } else if(userRandomNum2 == randomNumber) {
+                System.out.print("CORRECT! GOOD GUESS!");
+            }
+        } else if(userRandomNum > randomNumber) {
+            System.out.println("LOWER");
+            System.out.print("GUESS AGAIN: ");
+            int userRandomNum3 = scanner.nextInt();
+            if(userRandomNum3 < randomNumber) {
+                System.out.println("HIGHER");
+                System.out.println("The number was: " + randomNumber + ".");
+            } else if(userRandomNum3 > randomNumber) {
+                System.out.println("LOWER");
+                System.out.println("The number was: " + randomNumber + ".");
+            } else if(userRandomNum3 == randomNumber) {
+                System.out.print("CORRECT! GOOD GUESS!");
+            }
+        } else if (userRandomNum == randomNumber) {
+            System.out.print("CORRECT! GOOD GUESS!");
+        }
+        return userRandomNum;
+    }
 
 
     public static void main(String[] args) {
@@ -102,6 +140,7 @@ public class MethodsExercises {
         getInteger();
         factorial();
         rollDice();
+        guessNum();
     }
 
 }
