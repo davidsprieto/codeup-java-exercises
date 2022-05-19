@@ -16,19 +16,19 @@ public class ControlFlowExercises {
         do {
             System.out.println("a: " + a);
             a = a + 2;
-        }while(a <= 100);
+        } while(a <= 100);
 
         int b = 100;
         do {
             System.out.println("b: " + b);
             b = b - 5;
-        }while(b >= -10);
+        } while(b >= -10);
 
         double c = 2;
         do {
             System.out.printf("c: %.0f\n", c);
             c = Math.pow(c, 2);
-        }while(c <= 1000000);
+        } while(c <= 1000000);
 
         // #1c.
         for(int d = 5; d <= 15; d++) {
@@ -80,9 +80,9 @@ public class ControlFlowExercises {
             System.out.println("Great, I will display your number grade into a letter grade.");
             if(userGrade == 99 || userGrade == 100) {
                 System.out.println(userGrade + " is an A+ in letter grade form.");
-            }if(userGrade >= 90 && userGrade <= 98) {
+            } else if(userGrade >= 90 && userGrade <= 98) {
                 System.out.println(userGrade + " is an A in letter grade form.");
-            }if(userGrade >= 88 && userGrade <= 89) {
+            } else if(userGrade >= 88 && userGrade <= 89) {
                 System.out.println(userGrade + " is an A- in letter grade form.");
             } else if (userGrade >= 80 && userGrade <= 87) {
                 System.out.println(userGrade + " is a B in letter grade form.");
