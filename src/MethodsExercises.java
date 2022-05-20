@@ -42,7 +42,7 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a number between 1 and 10 again: ");
         int userNumber = scanner.nextInt();
-        System.out.print("You entered " + userNumber + "." + " Do you wish to continue (Yes/No)? ");
+        System.out.print("You entered " + userNumber + "." + " Do you wish to continue? (Yes/No): ");
         String userContinue = scanner.next();
         if(userContinue.equalsIgnoreCase("Yes") && userNumber >= 1 && userNumber <= 10) {
             long fact = 1;
@@ -63,7 +63,7 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter the number of sides for a pair of dice: ");
         int userDiceSides = scanner.nextInt();
-        System.out.print("You entered " + userDiceSides + "." + " Would you like to roll the dice - (Yes/No)? ");
+        System.out.print("You entered " + userDiceSides + "." + " Would you like to roll the dice? (Yes/No): ");
         String userContinue = scanner.next();
         if(userContinue.equalsIgnoreCase("Yes")) {
             Random random = new Random();
@@ -72,7 +72,7 @@ public class MethodsExercises {
             int dice1 = random.nextInt(high-low) + low;
             int dice2 = random.nextInt(high-low) + low;
             System.out.println("You rolled a " + dice1 + " for the first die and a " + dice2 + " for the second die.");
-            System.out.print("Would you like to roll again - (Yes/No)? ");
+            System.out.print("Would you like to roll again? (Yes/No): ");
             String userRollAgain = scanner.next();
             if(userRollAgain.equalsIgnoreCase("Yes")) {
                 System.out.println("Great!");

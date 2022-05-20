@@ -1,12 +1,12 @@
 package util;
 import java.util.Scanner;
 
+    // #1 Creating Input Validation Classes/Methods
 public class Input {
     private Scanner scanner;
 
 
     public Input() {
-        System.out.print("Please type something: ");
         this.scanner = new Scanner(System.in);
     }
 

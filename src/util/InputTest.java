@@ -1,7 +1,6 @@
 package util;
 
     // #1 - Input Validation Class - Testing Input.java methods.
-
 public class InputTest {
 
     public static void main(String[] args) {
