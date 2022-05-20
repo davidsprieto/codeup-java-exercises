@@ -13,7 +13,7 @@ public class CircleApp {
         System.out.print("Do you wish to continue to find out what the area and circumference of a circle is using the given radius? (Yes/No): ");
         String userContinue = scanner.nextLine();
         if(userContinue.equalsIgnoreCase("yes") || userContinue.equalsIgnoreCase("y")) {
-            Circle circle = new Circle(radius);
+            Circle circle = new Circle(radius); // Where radius gets past into the Circle class to have the user inputted radius value and to have access to the Circle Class methods.
             System.out.printf("The area of the circle is %.2f.%n" , circle.getArea());
             System.out.printf("The circumference of the circle is %.2f.%n", circle.getCircumference());
         } else {

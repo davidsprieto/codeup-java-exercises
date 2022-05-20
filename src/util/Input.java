@@ -7,6 +7,7 @@ public class Input {
 
 
     public Input() {
+        System.out.print("Type: ");
         this.scanner = new Scanner(System.in);
     }
 
