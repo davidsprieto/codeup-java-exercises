@@ -25,7 +25,7 @@ public class MethodsExercises {
     }
 
     // #2 - Validate user input
-    public static int getInteger() {
+    public static void getInteger() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a number between 1 and 10: ");
         int userInput = scanner.nextInt();
@@ -35,11 +35,10 @@ public class MethodsExercises {
         } else {
             System.out.println("Valid input.");
         }
-        return userInput;
     }
 
     // #3 - Calculate factorial
-    public static int factorial() {
+    public static void factorial() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a number between 1 and 10 again: ");
         int userNumber = scanner.nextInt();
@@ -57,11 +56,10 @@ public class MethodsExercises {
         } else if(userContinue.equalsIgnoreCase("No")) {
             System.out.println("Okay, that's fine.");
         }
-        return userNumber;
     }
 
     // #4 - Dice Rolling
-    public static int rollDice() {
+    public static void rollDice() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter the number of sides for a pair of dice: ");
         int userDiceSides = scanner.nextInt();
@@ -85,11 +83,10 @@ public class MethodsExercises {
         } else if (userContinue.equalsIgnoreCase("No")) {
             System.out.println("Okay, that's fine.");
         }
-        return userDiceSides;
     }
 
     // #5 - Game Development 101
-    public static int guessNum() {
+    public static void guessNum() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int low = 1;
@@ -126,7 +123,6 @@ public class MethodsExercises {
         } else if (userRandomNum == randomNumber) {
             System.out.print("CORRECT! GOOD GUESS!");
         }
-        return userRandomNum;
     }
 
 
