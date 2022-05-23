@@ -26,7 +26,7 @@ public class InClassJavaNotes {
 
         // 05/23/22 - TODO: Create an array of longs to track your daily steps for the last 7 days.
         long[] dailySteps = {3555, 4106, 6859, 3477, 2923, 11070, 92};
-        System.out.println(Arrays.toString(dailySteps)); // Prints: the above array.
+        System.out.println(Arrays.toString(dailySteps)); // Prints: the above array ("dailySteps").
 
         // 05/23/22 - Part of the to do for returning the sum of all numbers in an array method.
         int[] nums = {5, 10, 15, 20, 25};
