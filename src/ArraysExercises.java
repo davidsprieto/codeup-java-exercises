@@ -12,7 +12,7 @@ public class ArraysExercises {
     public static void main(String[] args) {
         // #1 - Arrays Basics
         int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println(numbers); // Prints: [I@129a8472 - need to use Arrays.toString() in order to print the array.
+        System.out.println(numbers); // Prints: [I@129a8472 - need to use Arrays.toString() in order to print the array. What it prints is the memory location of that data when it is compiled.
         System.out.println(Arrays.toString(numbers)); // Prints: [1, 2, 3, 4, 5]
 
         Person[] people;
