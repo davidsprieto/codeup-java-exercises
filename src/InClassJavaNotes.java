@@ -41,7 +41,7 @@ public class InClassJavaNotes {
         };
 
         for (int[] innerArrays : matrix) {
-            // System.out.println(Arrays.toString(innerArrays)); // Prints: each element of the matrix which are arrays themselves.
+            System.out.println(Arrays.toString(innerArrays)); // Prints: each element of the matrix which are arrays themselves.
             for(int i = 0; i < innerArrays.length; i++) {
                 System.out.println(innerArrays[i]); // Prints: each individual element within the arrays that are elements of the whole matrix.
             }
