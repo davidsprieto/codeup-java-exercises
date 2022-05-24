@@ -14,12 +14,12 @@ public class ShapesTest {
 
         // Rerunning the above tests to determine which getArea() and getPerimeter() methods are being called.
         Rectangle box3 = new Rectangle(5, 4);
-        System.out.println(box3.getPerimeter());
-        System.out.println(box3.getArea());
+        System.out.println(box3.getPerimeter()); // Prints: 18.0
+        System.out.println(box3.getArea()); // Prints: 20.0
 
         Rectangle box4 = new Square(5);
-        System.out.println(box4.getPerimeter());
-        System.out.println(box4.getArea());
+        System.out.println(box4.getPerimeter()); // Prints: 20.0
+        System.out.println(box4.getArea()); // Prints: 25.0
 
         // How can you determine which getArea() and getPerimeter() methods are being called on each object?
         // Answer: I believe you can determine it with IntelliJ. On the side where it shows the number for the lines of code, IntelliJ will notify you of the override.

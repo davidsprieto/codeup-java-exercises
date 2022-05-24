@@ -2,7 +2,7 @@ package shapes;
 
 // #1 - Shapes Java II - Inheritance and Polymorphism:
 public class Square extends Rectangle {
-    private double side;
+    protected double side;
 
     // Constructor.
     public Square(double side) {
