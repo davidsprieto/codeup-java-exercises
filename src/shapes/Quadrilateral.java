@@ -1,5 +1,6 @@
 package shapes;
 
+// Java II - Interfaces and Abstract Classes: More Shapes
 abstract class Quadrilateral extends Shape implements Measurable {
     protected double length;
     protected double width;
@@ -17,8 +18,8 @@ abstract class Quadrilateral extends Shape implements Measurable {
         return this.width;
     }
 
-    public abstract double setLength(double length);
+    public abstract void setLength(double length);
 
-    public abstract double setWidth(double width);
+    public abstract void setWidth(double width);
 
 }

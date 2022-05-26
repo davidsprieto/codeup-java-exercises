@@ -1,8 +1,7 @@
 package shapes;
 
-
-public class Rectangle {
-////     #1 - Shapes - Java II - Inheritance and Polymorphism:
+////     Java II - Inheritance and Polymorphism: #1 - Shapes
+//public class Rectangle {
 //    protected double length;
 //    protected double width;
 //
@@ -19,5 +18,32 @@ public class Rectangle {
 //    public double getPerimeter() {
 //        return (2 * length) + (2 * width);
 //    }
+//}
+
+// Java II - Interfaces and Abstract Classes: More Shapes
+public class Rectangle extends Quadrilateral implements Measurable {
+
+    public Rectangle(double length, double width) {
+        super(length, width);
+        this.length = length;
+        this.width = width;
+    }
+
+    public void setLength(double newLength) {
+        this.length = newLength;
+    }
+
+    public void setWidth(double newWidth) {
+        this.width = newWidth;
+    }
+
+    public double getArea() {
+        return length * width;
+    }
+
+    public double getPerimeter() {
+        return (2 * length) + (2 * width);
+    }
 
 }
+
