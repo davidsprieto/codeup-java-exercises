@@ -32,18 +32,18 @@ public class Square extends Quadrilateral {
         this.side = side;
     }
 
-    public void setLength(double newSide) {
-        setSides(newSide);
+    public void setLength(double newLength) {
+        setSides(newLength);
     }
 
-    public void setWidth(double newSide) {
-        setSides(newSide);
+    public void setWidth(double newWidth) {
+        setSides(newWidth);
     }
 
-    public double setSides(double newSide) {
+    public void setSides(double newSide) {
+        this.side = newSide;
         this.width = newSide;
         this.length = newSide;
-        return this.side = newSide;
     }
 
     public double getArea() {

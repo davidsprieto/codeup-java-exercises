@@ -18,7 +18,7 @@ public class ArraysExercises {
         Person[] people;
         people = new Person[3]; // Can also be written like: Person[] people = new Person[3].
         System.out.println(Arrays.toString(people)); // Prints: [null, null, null], because the elements in the array have no assigned values.
-        people[0] = new Person("Joe"); // Assigning a new instance of the Person class to each element (lines 21 - 23).
+        people[0] = new Person("Joe"); // Creating a new instance of the Person class to each element (lines 21 - 23).
         people[1] = new Person("Bob");
         people[2] = new Person("Bill");
         System.out.println(Arrays.toString(people)); // Prints: [Person@2f7c7260, Person@2d209079, Person@6bdf28bb]. Need to use .getName() method to print the names of each person in the people array. However, cannot chain that method on in this line of code.
