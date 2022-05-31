@@ -14,9 +14,9 @@ public class InputTest {
 
         System.out.println(input.getDouble()); // Prints: the double (decimal number) the user enters.
 
-        System.out.print(input.getInt(1, 20)); // Prints: the integer the user enters as long as it is between 1 and 20. It will continue to ask if it is outside the passed in ranges.
+        System.out.println(input.getInt(1, 20)); // Prints: the integer the user enters as long as it is between 1 and 20. It will continue to ask if it is outside the passed in ranges.
 
-        System.out.print(input.getDouble(1, 50)); // Prints: the double (decimal number) the user enters as long as it is between 1 and 50. It will continue to ask if it is outside the passed in ranges.
+        System.out.println(input.getDouble(1, 50)); // Prints: the double (decimal number) the user enters as long as it is between 1 and 50. It will continue to ask if it is outside the passed in ranges.
 
     }
 
