@@ -9,7 +9,7 @@ public class Input {
     private Scanner scanner;
 
     public Input() {
-        System.out.print("Type --> ");
+        System.out.print("");
         this.scanner = new Scanner(System.in);
     }
 

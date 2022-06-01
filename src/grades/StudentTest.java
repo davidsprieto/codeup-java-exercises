@@ -24,4 +24,6 @@ public class StudentTest {
         System.out.println(John.getStudentInformation()); // Prints: Student: John - Grades: [96, 87, 93, 91] - GPA: 91.75%.
     }
 
+
+
 }
