@@ -41,7 +41,15 @@ public class ContactsManager {
             String searchContact = scanner3.nextLine();
             searchContacts(String.valueOf(pathFileToRead), searchContact);
         } else if (chooseOperation == 4) {
-            System.out.println("Working on it.");
+            System.out.println("\nDISPLAYING CONTACTS\n");
+            System.out.println("Name: | Phone Number: \n" + "---------------------");
+            Files.lines(pathFileToRead)
+                    .forEach(System.out::println);
+            System.out.println("\nDELETE A CONTACT:\n");
+            System.out.print("Enter a name: ");
+            Scanner scanner5 = new Scanner(System.in);
+            String deleteContact = scanner5.nextLine();
+            deleteContact(String.valueOf(pathFileToRead), deleteContact);
         } else if (chooseOperation == 5) {
             System.out.println("\nExit? Okay, have a nice day.");
         }
@@ -84,6 +92,25 @@ public class ContactsManager {
                 System.out.println("\nName: | Phone Number: \n" + "---------------------\n" + contactName);
             }
         }
+        System.out.println("\nWhat would you like to do next?");
+        mainMenu();
+    }
+
+    // This method allows the user to delete an existing contact.
+    public static void deleteContact(String fileName, String deleteContact) throws IOException {
+        Scanner scanner6 = new Scanner(new File(fileName));
+        while(scanner6.hasNextLine()) {
+            String contactName = scanner6.nextLine();
+            if (contactName.contains(deleteContact) || contactName.equalsIgnoreCase(deleteContact)) {
+                Files.write(pathFileToWrite,
+                        List.of(contactName),
+                        StandardOpenOption.TRUNCATE_EXISTING
+                );
+            }
+        }
+        System.out.println("\nUpdating list of contacts...\n");
+        Files.lines(pathFileToRead)
+                .forEach(System.out::println);
         System.out.println("\nWhat would you like to do next?");
         mainMenu();
     }
