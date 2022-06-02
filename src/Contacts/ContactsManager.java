@@ -1,13 +1,9 @@
 package Contacts;
-import java.io.File;
+import java.io.*;
+import java.nio.file.*;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
-import java.nio.file.Path;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.util.stream.Collectors;
 
 public class ContactsManager {
     static Path pathFileToRead = Paths.get("src", "/Contacts/contacts.txt");
@@ -49,7 +45,7 @@ public class ContactsManager {
             System.out.print("Enter a name: ");
             Scanner scanner5 = new Scanner(System.in);
             String deleteContact = scanner5.nextLine();
-            deleteContact(String.valueOf(pathFileToRead), deleteContact);
+            deleteContact(deleteContact);
         } else if (chooseOperation == 5) {
             System.out.println("\nExit? Okay, have a nice day.");
         }
@@ -97,17 +93,12 @@ public class ContactsManager {
     }
 
     // This method allows the user to delete an existing contact.
-    public static void deleteContact(String fileName, String deleteContact) throws IOException {
-        Scanner scanner6 = new Scanner(new File(fileName));
-        while(scanner6.hasNextLine()) {
-            String contactName = scanner6.nextLine();
-            if (contactName.contains(deleteContact) || contactName.equalsIgnoreCase(deleteContact)) {
-                Files.write(pathFileToWrite,
-                        List.of(contactName),
-                        StandardOpenOption.TRUNCATE_EXISTING
-                );
-            }
-        }
+    public static void deleteContact(String deleteContact) throws IOException {
+        File file = new File(String.valueOf(pathFileToWrite));
+        List<String> out = Files.lines(file.toPath())
+                .filter(line -> !line.contains(deleteContact))
+                .collect(Collectors.toList());
+        Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
         System.out.println("\nUpdating list of contacts...\n");
         Files.lines(pathFileToRead)
                 .forEach(System.out::println);
