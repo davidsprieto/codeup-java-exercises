@@ -59,7 +59,6 @@ public class ConsoleExercises {
         // Can also be written as:
         System.out.printf("You entered a length of %s and a width of %s%n", length, width);
 
-
         // #2
         System.out.println("The area is: " + Integer.parseInt(length) * Integer.parseInt(width) + " ft^2.");
         System.out.println("The perimeter is: " + ((Integer.parseInt(length) * 2) + (Integer.parseInt(width) * 2)) + " feet.");

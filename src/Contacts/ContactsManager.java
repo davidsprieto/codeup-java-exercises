@@ -56,8 +56,7 @@ public class ContactsManager {
     public static void showContacts() throws IOException {
         System.out.println("\nDISPLAYING CONTACTS\n");
         System.out.println("Name: | Phone Number: \n" + "---------------------");
-        Files.lines(pathFileToRead)
-                .forEach(System.out::println);
+        Files.lines(pathFileToRead).forEach(System.out::println);
         System.out.println("\nWhat would you like to do next?");
         mainMenu();
     }
