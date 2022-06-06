@@ -2,21 +2,6 @@ import java.util.Scanner;
 
 public class GroovyMorningWarmupExercises {
 
-    public static void main(String[] args) {
-        // 06/01/22 - Testing Warmup:
-        ageInDays(65);
-
-        // 0601/22 - Testing Warmup:
-        mathOperation(4, "/", 2);
-
-        // 06/03/22 - Testing Warmup:
-        String numbers1 = "1 2 3 4 5";
-        highLow(numbers1);
-
-        String numbers2 = "1 9 3 4 -5";
-        highLow(numbers2);
-    }
-
     // 06/01/22 - Create a function that takes the age in years and returns the age in days:
     // example input: 65
     // expected output: 23725
@@ -65,6 +50,42 @@ public class GroovyMorningWarmupExercises {
             }
         }
         System.out.println(highNum + " " + lowNum);
+    }
+
+    // 06/06/22 - Write a function that prints the numbers 1 - 100 unless the number is divisible by 3, 5 or both 3 and 5.
+    // If divisible by 3 print "Fizz" . If divisible by 5 print "Buzz". If divisible by both 3 and 5 print "FizzBuzz":
+    public static void fizzBuzz() {
+        for(int f = 1; f <= 100; f++) {
+            if (f % 3 == 0 && f % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (f % 5 == 0) {
+                System.out.println("Buzz");
+            } else if (f % 3 == 0) {
+                System.out.println("Fizz");
+            } else {
+                System.out.println(f);
+            }
+        }
+    }
+
+
+
+    public static void main(String[] args) {
+        // 06/01/22 - Testing Warmup:
+        ageInDays(65);
+
+        // 06/01/22 - Testing Warmup:
+        mathOperation(4, "/", 2);
+
+        // 06/03/22 - Testing Warmup:
+        String numbers1 = "1 2 3 4 5";
+        highLow(numbers1);
+
+        String numbers2 = "1 9 3 4 -5";
+        highLow(numbers2);
+
+        // 06/06/22 - Testing Warmup:
+        fizzBuzz();
     }
 
 }
