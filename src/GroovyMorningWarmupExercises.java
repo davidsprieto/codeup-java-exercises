@@ -68,6 +68,24 @@ public class GroovyMorningWarmupExercises {
         }
     }
 
+    // 06/09/22 - You bought a few bunches of fruit over the weekend. Create a function that splits a bunch into singular objects inside an array.
+    // example input: [{name: "grapes", quantity: 2}]
+    // expected output: [{name: "grapes", quantity: 1}, {name: "grapes", quantity: 1}]
+    //
+    // example input:
+    // [{name: "currants", quantity: 1},
+    //  {name: "grapes", quantity: 2},
+    //  {name: "bananas", quantity: 2}]
+    // expected output:
+    // [{name: "currants", quantity: 1},
+    //  {name: "grapes", quantity: 1},
+    //  {name: "grapes", quantity: 1},
+    //  {name: "bananas", quantity: 1},
+    //  {name: "bananas", quantity: 1}]
+    public static void splitArray(String[] array) {
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -86,6 +104,9 @@ public class GroovyMorningWarmupExercises {
 
         // 06/06/22 - Testing Warmup:
         fizzBuzz();
+
+        // 06/09/22 - Testing Warmup
+
     }
 
 }
