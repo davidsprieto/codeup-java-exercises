@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class GroovyMorningWarmupExercises {
 
@@ -74,20 +74,18 @@ public class GroovyMorningWarmupExercises {
     //
     // example input:
     // [{name: "currants", quantity: 1},
-    //  {name: "grapes", quantity: 2},
-    //  {name: "bananas", quantity: 2}]
+    // {name: "grapes", quantity: 2},
+    // {name: "bananas", quantity: 2}]
     // expected output:
     // [{name: "currants", quantity: 1},
-    //  {name: "grapes", quantity: 1},
-    //  {name: "grapes", quantity: 1},
-    //  {name: "bananas", quantity: 1},
-    //  {name: "bananas", quantity: 1}]
-    public static void splitArray(String[] array) {
-
-    }
+    // {name: "grapes", quantity: 1},
+    // {name: "grapes", quantity: 1},
+    // {name: "bananas", quantity: 1},
+    // {name: "bananas", quantity: 1}]
 
 
 
+    // Main method for testing methods.
     public static void main(String[] args) {
         // 06/01/22 - Testing Warmup:
         ageInDays(65);
