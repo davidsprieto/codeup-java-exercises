@@ -1,4 +1,8 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class GroovyMorningWarmupExercises {
 
@@ -82,8 +86,32 @@ public class GroovyMorningWarmupExercises {
     // {name: "grapes", quantity: 1},
     // {name: "bananas", quantity: 1},
     // {name: "bananas", quantity: 1}]
+    public static class Fruit {
+        String name;
+        int quantity;
 
+        public Fruit(String name, int quantity) {
+            setName(name);
+            setQuantity(quantity);
+        }
 
+        public String getName() {
+            return this.name;
+        }
+
+        public int getQuantity() {
+            return this.quantity;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setQuantity(int quantity) {
+            this.quantity = quantity;
+        }
+
+    }
 
     // Main method for testing methods.
     public static void main(String[] args) {
@@ -104,6 +132,18 @@ public class GroovyMorningWarmupExercises {
         fizzBuzz();
 
         // 06/09/22 - Testing Warmup
+        List<Fruit> fruits = List.of(
+                new Fruit("currants", 1),
+                new Fruit("grapes", 2),
+                new Fruit("bananas", 2)
+        );
+
+        final List<Fruit> expanded = fruits.stream()
+                .flatMap(fruit -> IntStream.generate(() -> 1)
+                        .mapToObj(i -> new Fruit(fruit.getName(), i))
+                        .limit(fruit.getQuantity()))
+                .collect(Collectors.toList());
+        expanded.forEach(System.out::println);
 
     }
 
