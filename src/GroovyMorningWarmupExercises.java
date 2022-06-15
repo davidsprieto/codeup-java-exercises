@@ -91,24 +91,16 @@ public class GroovyMorningWarmupExercises {
         int quantity;
 
         public Fruit(String name, int quantity) {
-            setName(name);
-            setQuantity(quantity);
+            this.name = name;
+            this.quantity = quantity;
         }
 
         public String getName() {
-            return this.name;
+            return name;
         }
 
         public int getQuantity() {
-            return this.quantity;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public void setQuantity(int quantity) {
-            this.quantity = quantity;
+            return quantity;
         }
 
     }
