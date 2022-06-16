@@ -130,6 +130,7 @@ public class GroovyMorningWarmupExercises {
                 new Fruit("bananas", 2)
         );
 
+        // UNSUCCESSFUL - It prints out the location in memory.
         final List<Fruit> expanded = fruits.stream()
                 .flatMap(fruit -> IntStream.generate(() -> 1)
                         .mapToObj(i -> new Fruit(fruit.getName(), i))
