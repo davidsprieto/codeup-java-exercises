@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -105,6 +103,26 @@ public class GroovyMorningWarmupExercises {
 
     }
 
+    // 06/23/22 - Given an array of ints, return true if the array contains two 7's next to each other,
+    // or there are two 7's separated by one element, such as with {7, 1, 7}.
+    //
+    //example input: [1, 7, 7]
+    //expected output: true
+    //
+    //example input: [1, 7, 1, 7]
+    //expected output: true
+    //
+    //example input: [2,7,8]
+    //expected output: false
+    public static boolean sevens(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == array[i + 1] || array[i] == array[i + 2]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     // Main method for testing methods.
     public static void main(String[] args) {
         // 06/01/22 - Testing Warmup:
@@ -123,7 +141,7 @@ public class GroovyMorningWarmupExercises {
         // 06/06/22 - Testing Warmup:
         fizzBuzz();
 
-        // 06/09/22 - Testing Warmup
+        // 06/09/22 - Testing Warmup:
         List<Fruit> fruits = List.of(
                 new Fruit("currants", 1),
                 new Fruit("grapes", 2),
@@ -138,6 +156,15 @@ public class GroovyMorningWarmupExercises {
                 .collect(Collectors.toList());
         expanded.forEach(System.out::println);
 
+        // 06/23/22 - Testing Warmup:
+        int[] numArray1 = {1, 7, 7};
+        System.out.println(sevens(numArray1));
+
+        int[] numArray2 = {1, 7, 1, 7};
+        System.out.println(sevens(numArray2));
+
+        int[] numArray3 = {2, 7, 8};
+        System.out.println(sevens(numArray3));
     }
 
 }
