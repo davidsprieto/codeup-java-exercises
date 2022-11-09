@@ -18,14 +18,12 @@ public class Movie {
         return this.category;
     }
 
-    public String setMovieName(String newName) {
-        name = newName;
-        return name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String setMovieCategory(String newCategory) {
-        category = newCategory;
-        return category;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
 }
