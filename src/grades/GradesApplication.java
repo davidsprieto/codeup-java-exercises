@@ -54,7 +54,7 @@ public class GradesApplication {
             userInput = scanner.nextLine();
         } while (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y"));
 
-        System.out.println("\nGoodbye, and have a wonderful day!");
+        System.out.println("\nGoodbye, have a wonderful day!");
     }
 
 }
