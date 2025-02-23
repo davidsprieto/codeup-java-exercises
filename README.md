@@ -1,4 +1,4 @@
-# Codeup Java Exercises - Codeup Repository Created to Learn Java!
+# Codeup Java Exercises - Codeup Repository Created to Learn Java
 
 Programming Language:
 - Java
