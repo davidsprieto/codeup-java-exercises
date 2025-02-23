@@ -1,4 +1,1 @@
-# Codeup Java Exercises - Codeup Repository Created to Learn Java
-
-Programming Language:
-- Java
+<h1 align=center>Codeup Java Exercises - Codeup Repository for Java</h1>
